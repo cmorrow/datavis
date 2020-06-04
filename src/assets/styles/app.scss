@@ -1,8 +1,85 @@
 // Override default variables before the import
-$body-bg: red;
+$body-bg: #000;
 
 $primary: #00a6ff;
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
+@import './_slider.scss';
+
+body {
+   margin: 0;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+     sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+ 
+ code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+     monospace;
+ }
+
+.app-header {
+   background-color: #282c34;
+   min-height: 50px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: calc(10px + 2vmin);
+ }
+
+ #main {
+    padding-top: 40px;
+ }
+
+//  chart
+.chart {
+  position: relative;
+  .d3-chart {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: relative;
+  }
+
+  .chart-row {
+    width: 100%;
+    position: absolute;
+    height: 25px;
+    color: #fff;
+
+    .bar {
+      color: #fff;
+      height: 25px;
+
+      .value {
+        z-index: 1;
+        display: block;
+        float: right;
+        color: #fff;
+        margin-right: 5px;
+      }
+    }
+
+    .date {
+      z-index: 1;
+      display: block;
+      margin-left: 5px;
+      float: left;
+      min-width: 150px;
+      color: #fff;
+    }
+
+    
+  }
+}
+
+
+
+
+
 
