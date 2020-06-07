@@ -39,6 +39,10 @@ body {
 .chart {
   position: relative;
 
+  .sort-title {
+    font-size: 24px;
+  }
+
   .d3-chart {
     position: fixed;
     width: 100%;
